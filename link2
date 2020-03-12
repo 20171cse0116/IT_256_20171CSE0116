@@ -1,0 +1,25 @@
+<html>
+<STYLE>
+a:link,a:visited{  display: inline;
+  width: 100px;
+  height: 100px;
+  padding: 5px 25px;
+  border: 1px solid blue;
+  background-color: 78212;
+text-decoration:underline;
+
+}
+a:hover{
+color:yellow;
+text-decoration:underline;
+background-color:maroon;
+}
+a:active{
+color:green;
+background-color:white;
+}
+</style>
+<body>
+<a href="https://google.com">Link</a>
+</body>
+</html>
