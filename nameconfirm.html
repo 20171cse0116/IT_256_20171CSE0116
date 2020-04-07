@@ -1,0 +1,32 @@
+ <html>
+ <script type="text/javascript">
+ var Name
+
+ Name = window.prompt( "Enter Name" );
+
+
+document.writeln( "<h1>Name: " + Name + "</h1>" );
+
+              function getConfirmation()
+               {
+               var retVal = confirm("Is the name entered "+name+"correct ?");
+               if( retVal == true ){
+                  document.write ("User wants to continue!");
+                  return true;
+               }
+               else{
+                  document.write ("User does not want to continue!");
+                  return false;
+               }
+            }
+</script>
+      
+   </head>
+   <body>
+      <p>Click to continue </p>
+      
+      <form>
+         <input type="button" value="Click Me" onclick="getConfirmation();" />
+      </form>
+      </body
+</html>
