@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Stacked Paragraphs</title>
+            
+            <style type="text/css">
+                #S1
+                {
+                    border:solid thick black;
+                    background-color:white;
+                    padding:10px;
+                    width:200px;
+                    height:200px;
+                    position:absolute;
+                    top:100px;
+                    left:100px;
+                    z-index:1;
+                }
+            #S2
+                {
+                    border:solid thick black;
+                    background-color:RED;
+                    padding:10px;
+                    width:200px;
+                    height:200px;
+                    position:absolute;
+                    top:120px;
+                    left:120px;
+                    z-index:2;
+                }
+            #S3
+                {
+                    border:solid thick black;
+                    background-color:maroon;
+                    padding:10px;
+                    width:200px;
+                    height:200px;
+                    position:absolute;
+                    top:140px;
+                    left:140px;
+                    z-index:3;
+                }
+            </style>
+    </head>
+    <body>
+        <script type=text/javascript>
+            var topstack="S3";
+            var origpos;
+            
+            function mover(toTop,pos)
+                {
+                    document.getElementById(toTop).style.zIndex="4";
+                    topstack=toTop;
+                    origpos=pos;
+                }
+            
+            function moveBack()
+                {
+                    document.getElementById(topstack).style.zIndex=origpos;
+                }
+        </script>
+        <p id=S1 onMouseOver=mover('S1','1'); onMouseOut=moveBack()>There are dozens of different wiki engines in use, both standalone and part of other software, such as bug tracking systems. Some wiki engines are open source, whereas others are proprietary. Some permit control over different functions (levels of access);</p>
+        <p id=S2 onMouseOver=mover('S2','2'); onMouseOut=moveBack()>A wiki is run using wiki software, otherwise known as a wiki engine. A wiki engine is a type of content management system, but it differs from most other such systems, including blog software, </p>
+        <p id=S3 onMouseOver=mover('S3','3'); onMouseOut=moveBack()>A wiki (/ˈwɪki/ (About this soundlisten) WIK-ee) is a knowledge base website on which users collaboratively modify and structure content directly from a web browser. In a typical wiki, text is written using a simplified markup language and often edited with the help of a rich-text editor.</p>
+    </body>
+ </html>
