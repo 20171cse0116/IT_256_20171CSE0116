@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Calculator</title>
+</head>
+<script>
+function add(){
+var n1=Number(document.getElementById("num1").value);
+var n2=Number(document.getElementById("num2").value);
+document.getElementById("add").innerHTML=" The sum is: "+(n1+n2);
+}
+function sub(){
+var n1=Number(document.getElementById("num1").value);
+var n2=Number(document.getElementById("num2").value);
+document.getElementById("sub").innerHTML=" The difference is: "+(n1-n2);
+}
+function mul(){
+var n1=Number(document.getElementById("num1").value);
+var n2=Number(document.getElementById("num2").value);
+if(n1<=0||n2<=0)
+document.getElementById("mul").innerHTML=" Number not allowed."
+else
+document.getElementById("mul").innerHTML=" The product is: "+(n1*n2);
+}
+function div(){
+var n1=Number(document.getElementById("num1").value);
+var n2=Number(document.getElementById("num2").value);
+if(n1<=0||n2<=0)
+document.getElementById("div").innerHTML=" Number not allowed."
+else
+document.getElementById("div").innerHTML=" The quotient is: "+(n1/n2);
+}
+</script>
+<body>
+<h1>CALCULATOR</h1>
+<div>
+<label for="firstNumber">Enter the first number: </label>
+<input type="number" id="num1" pattern="[1-9]" required>
+<br><br>
+<label for="secondNumber">Enter the second number: </label>
+<input type="number" id="num2" pattern="[1-9]" required>
+<br><br>
+<button onclick="add();">ADD</button><span id="add"></span>
+<br><br>
+<button onclick="sub();">SUBTRACT</button><span id="sub"></span>
+<br><br>
+<button onclick="mul();">MULTIPLY</button><span id="mul"></span>
+<br><br>
+<button onclick="div();">DIVIDE</button><span id="div"></span>
+
+</div>
+</body>
+</html>
